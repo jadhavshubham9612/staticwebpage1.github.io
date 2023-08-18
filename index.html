@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e98206d6e4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body
+        {
+            font-family: mostserrate;
+            width: 100%;
+            height: 250vh;
+            cursor: pointer;
+        }
+        nav
+        {
+            width: 100%;
+            height: 80px;
+            position: relative;
+            cursor: pointer;
+        }
+       .logo
+        {
+            line-height: 80px;
+            width: 100px;
+            font-size: 35px;
+            padding: 0 50px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .logo i
+        {
+            position: relative;
+            padding: 10px;
+            font-size: 30px;
+            background-color:rgba(18, 191, 225, 0.426);
+            color: #030200fb;
+            border-radius: 7px;
+            
+        }
+        nav ul
+        {
+            float: right;
+            margin-right: 20px;
+        }
+        nav ul li
+        {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        .option
+        {
+            width: 15px;
+        }
+        nav ul li a
+        {
+            color: black;
+            font-size: 17px;
+            padding: 6px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+           
+        }
+        .main
+        {
+            background: linear-gradient(rgba(0 ,0 ,0, 0.5)50%,rgba(0, 0 ,0 ,0.5)50%),url(img/p.png);
+            width: 100%;
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .hero
+        {
+    
+        width: 500px;
+        height: 450px;
+        background: linear-gradient(to top, rgba(248, 244, 244, 0.752)50%, rgba(248, 244, 244, 0.752)50%);
+        position: relative;
+        top: 30px;
+        margin-left: 90px;
+        
+        }
+        .page
+        {
+        background-color: black;
+        width: 500px;
+        line-height: 80px;
+        margin-left:0;
+
+        height: 80px;
+        position: relative;
+        top: 0;
+        
+            
+        }
+            
+        .page ul
+        {
+            float: right;
+            margin-right: 20px;
+            
+        }
+        .page ul li
+        {
+            display: inline-block;
+            line-height: 80px;
+            margin: 1px 0px;
+            
+        }
+        .page ul li a
+        {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 1px 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+        ul li a:hover
+        {
+            color: #ff7200;
+        }
+        .c-icons
+        {
+            color: white;
+            position: relative;
+            margin-left: 35px;
+            font-size: 10px;
+        }
+        .c-icons:hover
+        {
+            color: #ff7200;
+        }
+        .location
+        {
+            position: relative;
+            top: 25px;
+            margin-left: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        .box
+        {
+            width: 94%;
+            height: 30px;
+            padding: auto;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .check
+        {
+            position: relative;
+            margin-top: 20px;
+        }
+    
+        .check #check-out
+        {
+            padding-left: 170px;
+        }
+        .date
+        {
+            position: relative;
+            margin-top: 15px;
+            
+        }
+        .date #date
+        {
+            height: 30px;
+            padding: auto;
+            width: 40%;
+            border-radius: 5px;
+        }
+        .date #date-in
+        {
+            height: 30px;
+            margin-left:40px;
+            width: 45%;
+            border-radius: 5px;
+        }
+        .check-box
+        {
+            position: relative;
+            margin-top: 20px;
+        }
+        
+        .check-box #child
+        {
+            padding-left: 199.90px;
+        }
+        .check-box1
+        {
+            position: relative;
+            top: 10px;
+            
+        }
+        .check-box1 #num
+        {
+            height: 30px;
+            width: 40%;
+            border-radius: 5px;
+        }
+        .check-box1 #num1
+        {
+            height: 30px;
+            width: 45%;
+            margin-left: 41px;
+            border-radius: 5px;
+        }
+        .submit
+        {
+            position: relative;
+            top: 35px;
+            
+        }
+        .btn
+        {
+            width: 95%;
+            height: 40px;
+            background: #ff7200;
+            border: 2px solid #ff7200;
+            color: black;
+            font-size: large;
+            border-radius: 5px;
+            font-weight: bold ;
+            cursor: pointer;
+        }
+        .btn:hover
+        {
+            color:  #ff7200;
+            transition: 2ms;
+            background:white;
+            border: none;
+        }
+        .p-icons
+        {
+            color: black;
+            margin-left:37%;
+            position: relative;
+            top: 30px;
+            border: none;
+            font-size: 16px;
+        }
+       
+        .main h3{
+            position:absolute;
+            float:center;
+            font-size: 25px;
+            margin-left: 65%;
+            color: white;
+            bottom:55%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .main p
+        {
+            position: relative;
+            font-size: 40px;
+            margin-left: 57%;
+            margin-right: 19%;
+            color: white;
+            bottom: 47%;
+            background:linear-gradient(rgba(0, 0, 0, .4)50%, rgba(0, 0, 0, .4)50%);
+            padding-inline: 25px;
+            padding-block: 5px;
+            
+        }
+        .main h4
+        {
+            position: relative;
+            float: center;
+            font-size: 25px;
+            bottom: 45%;
+            margin-left: 71%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: yellow;
+
+        }
+        .conten
+        {
+             
+        width: 100%;
+        height: 110px;
+         background:linear-gradient(rgba(0, 0, 0, 0.21)50%,rgba(0, 0, 0, 0.21)50%);
+         display: flex;
+         flex-direction: row;
+         justify-content:space-around;
+         padding-top:20px;  
+          
+        }
+        .short1
+        {
+            width: 250px;
+            height: 70px;
+            color: red;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+             gap:20px;
+            
+        }
+        .short1 #box-c
+        {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color:white;
+            background:#f903af;
+            
+        }
+        .short2
+        {
+            width: 250px;
+            height: 70px;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .short2 #box-d
+        {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color:white;
+            background:#ffa500;
+        }
+        .short3
+        {
+            width: 250px;
+            height: 70px;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+           
+        }
+        .short3 #box-e
+        {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color:white;
+            background: #ff0000;
+        }
+        .short4
+        {
+            width: 250px;
+            height: 70px;
+            color:red;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 20px;
+        }
+        .short4 #box-f
+        {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color:white;
+            background: rgba(14, 88, 141, 0.916);
+        }
+        header
+        {
+            margin: 50px 100px 10px;
+            text-align: center;
+            font-size: 24px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           
+        }
+        .image-gallery
+        {
+           margin:10px 90px 40px;
+           position: relative;
+            overflow: auto;
+        }
+        .box-img
+        {
+            display: block;
+            float: left;
+            width: 25%;
+            height: auto;
+            padding: 20px;
+            padding-left: 12px;
+            color:black;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+       img
+       {
+        width: 100%;
+        border-radius: 5px;
+        height: auto;
+       }
+       img:hover
+       {
+        transform: scale(2,2);
+        transition: .3s;
+       }
+       .text-x
+       {  position: relative;
+          padding: 5px;
+          text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.11);
+            border-radius: 5px;
+            overflow: hidden;
+       }
+       .text-x:hover
+       {
+        transform:scale(2,2);
+        transition: .3s;
+       }
+       .footer
+       {
+        width: 100%;
+        height: 46vh;
+        background:linear-gradient(rgb(0,0,0),rgba(0,0,0));
+        color: #fff;
+       }
+       .footer-long
+       {
+        position: relative;
+        bottom: 70px;
+        display: flex;
+        justify-content: center;
+       }
+       .footer h1
+       {
+            text-align: center;
+            color: #fff;
+            position: relative;
+            top: 25px;
+       }
+        .foot
+        {
+            padding:40px;
+            font-size: 20px;
+        }
+        .foot p
+        {
+            font-size: 17px;
+            color: #fff;
+        }
+        .foot p i
+        {
+            color: #fff ;
+            padding: 8px;
+            font-size: 18px;
+        }
+        .copy
+        {
+            color: #fff;
+            text-align: center;
+            position: relative;
+            bottom: 95px;
+        }
+       .logo-media
+       {
+        position: relative;
+        bottom: 40px;
+        margin-left: 90px;
+       }
+       .logo-media h1
+       {
+        position: relative;
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+       }
+       .logo-media p
+       {
+        position: relative;
+        top: 60px;
+        margin-left: 20px;
+        font-size: 20px;
+        color: #ff7200;
+       }
+       .logo-media a
+       {
+        position: relative;
+        top: 80px;
+        margin-left:10px ;
+        font-size: 18px;
+        padding: 5px;
+        color:white;
+       }
+       .logo-media i
+       {
+        position: relative;
+            padding: 5px;
+            font-size: 25px;
+            background-color:rgba(18, 191, 225, 0.426);
+            color: #fff;
+            border-radius: 5px;
+       }
+       
+    </style>
+</head>
+<body>
+    <nav>
+    <label class="logo"><i class="fa-solid fa-sun"></i>Suntravels </label>
+   
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Tours</a></li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Cars</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">My Account</a>
+        <select class="option" > <option value="hello"><a href="#">My</a></option>   
+         <option value="hello"><a href="#">Shubham Patil</a></option></select>
+        </li>
+        <li>
+            <a href="#">English</a>
+            <select class="option-box"><option value="US Dollar">US Dollar</option>
+                <option value="US Dollar">IND-RS</option>
+            </select>
+        </li>
+    </ul>
+</nav>
+<div class="main">
+    <div class="hero">
+            <div class="page">
+                <ul>
+                    <li><i class="fa-solid fa-hotel c-icons" ></i><a href="#">Hotels</a></li>
+                    <li><i class="fa-solid fa-plane-departure c-icons"></i><a href="#">Flights</a></li>
+                    <li><i class="fa-solid fa-mountain-city c-icons"></i><a href="#">Tours</a></li>
+                    <li><i class="fa-solid fa-car c-icons"></i><a href="#">Cars</a></li>
+                </ul>   
+            </div>
+        <div class="location">
+                 <label>Location</label><br>
+                <select class="box"><option value="select Location">Select Location</option>
+                    <option value="select Location">Pune</option>
+                    <option value="select Location">Mumbai</option>
+                    <option value="select Location">Goa</option>
+                </select>
+            <div class="check">
+               <lebel id="check-in">Check In</lebel> <label id="check-out">Check Out</label>
+            </div>
+            <div class="date">
+                <input type="date" id="date"> <input type="date" id="date-in">
+            </div>
+            <div class="check-box">
+                <lebel id="adult">Adult</lebel><label id="child">Child</label>
+            </div>
+            <div class="check-box1">
+                 <input type="number" id="num">
+                  <input type="number" id="num1">
+            </div>
+            <div class="submit">
+                <a href="#"> <i class="fa-solid fa-magnifying-glass p-icons"></i><button class="btn">Search</button></a>
+            </div>
+             
+        </div>
+
+            
+    </div>
+            <h3>Find the Perfect Trip</h3><br><br>
+            <p>Book now pay later</p>
+            <h4>Best Location</h4>
+           
+</div>
+       
+        
+</div>
+    <div class="conten">
+        <div class="short1">
+            <i class="fa-solid fa-suitcase-rolling fa-2xl "id="box-c"></i>
+
+            <span class="cls" >Over 4,30,000 <br> Listings available</span>
+        </div>
+        <div class="short2">
+            <i class="fa-solid fa-gear fa-2xl" id="box-d"></i>
+            <span>Manage your<br>billing online</span>
+        </div>
+        <div class="short3">
+            <i class="fa-solid fa-comments-dollar fa-2xl" id="box-e"></i>
+            <span>Best Prices and<br>Deals Packages</span>
+        </div>
+        <div class="short4">
+            <i class="fa-solid fa-shield-halved fa-2xl" id="box-f"></i>
+            <span>100% secure<br>payment</span>
+        </div>
+    </div>
+    <header>
+        <h3>Freatured Hotels</h3>
+    </header>
+    <hr/>
+    <div class="image-gallery">
+        <div class="box-img"><img src="img/H.png"><div class="text-x">LUXERY HOTEL</div> </div>
+        <div class="box-img"><img src="img/G.png"><div class="text-x">RECEPTION</div></div>
+        <div class="box-img"><img src="img/N.png"><div class="text-x">LUXERY HOTEL</div></div>
+        <div class="box-img"><img src="img/D.png"><div class="text-x">LUXERY HOTEL</div></div>
+        <div class="box-img"><img src="img/R.png"><div class="text-x">LUXERY HOTEL</div></div>
+        <div class="box-img"><img src="img/S.png"><div class="text-x">LUXERY HOTEL</div></div>
+        <div class="box-img"><img src="img/K.png"><div class="text-x">SWIMMING POOL</div></div>
+        <div class="box-img"><img src="img/L.png"><div class="text-x">LUXERY HOTEL</div></div> 
+        <div class="box-img"><img src="img/Z.png"><div class="text-x">LUXERY HOTEL</div></div> 
+        <div class="box-img"><img src="img/Y.png"><div class="text-x">HOTEL TOP VIEW</div></div> 
+        <div class="box-img"><img src="img/V.png"><div class="text-x">CANDEL LIGHT DENNER AREA</div></div> 
+        <div class="box-img"><img src="img/X.png"><div class="text-x">RESTAURANT</div></div>   
+    </div>
+    <div class="footer">
+        <h1>Hotel Amenities</h1>
+        <div class="logo-media">
+            <h1><i class="fa-solid fa-sun"></i>Suntravels</h1>
+            <p>Follow Us</p>
+            <a href="#"><ion-icon class="icons-f" name="logo-facebook" ></ion-icon></a>
+            <a href="#"><ion-icon class="icons-f" name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon class="icons-f" name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon class="icons-f" name="logo-Google"></ion-icon></a>
+            <a href="#"><ion-icon class="icons-f" name="logo-skype"></ion-icon></a>
+        </div> 
+        <div class="footer-long">
+            <div class="foot">
+           <p ><i class="fa-solid fa-wifi"></i>Free Wi-Fi</p>
+           <p><i class="fa-solid fa-utensils"></i>Restaurant</p>
+           <p><i class="fa-solid fa-person-swimming"></i>Swimming Pool</p>
+           <p><i class="fa-solid fa-bell"></i>24 Hours Room Services</p>
+           <p><i class="fa-solid fa-truck-front"></i>Travel Desk</p>
+             </div>
+             <div class="foot">
+            <p><i class="fa-solid fa-dumbbell"></i>Fitness Centre</p>
+            <p><i class="fa-solid fa-business-time"></i>Business Center</p>
+            <p><i class="fa-regular fa-newspaper"></i>Daily Newspaper</p>
+            <p><i class="fa-solid fa-fan"></i>Fully Air Conditioned</p>
+            <p><i class="fa-solid fa-martini-glass"></i>Minibar</p>
+           
+             </div>
+            <div class="foot">
+            <p><i class="fa-solid fa-door-open"></i>Interconnected Rooms</p>
+            <p><i class="fa-solid fa-jug-detergent"></i>Laundry service</p>
+            <p><i class="fa-solid fa-scale-unbalanced-flip"></i>Weighing Machine</p>
+            <p><i class="fa-solid fa-key"></i>Electronic Safe</p>
+            <p><i class="fa-solid fa-person-booth"></i>Mother's Room</p>
+             </div>
+        </div>
+       
+        <div class="copy">
+            <p>Copyright © 2012 The Example Company</p>
+        </div>
+    </div>
+    
+</body>
+</html>
